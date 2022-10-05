@@ -129,8 +129,7 @@ table {
 }
 
 .productCard {
-  width: 340px;
-  max-width: 340px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   border: 2px solid #e0e0e0;
@@ -141,8 +140,7 @@ table {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 300px;
-  max-width: 300px;
+  min-width: 300px;
   height: 150px;
   max-height: 150px;
 }

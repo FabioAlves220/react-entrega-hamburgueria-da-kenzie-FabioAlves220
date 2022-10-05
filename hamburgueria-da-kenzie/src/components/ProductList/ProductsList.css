@@ -2,7 +2,12 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  width: 1080px;
-  min-width: 940px;
+  max-width: 940px;
   gap: 20px;
+}
+@media (max-width: 1019px) {
+  .productsList {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
 }
