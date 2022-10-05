@@ -1,0 +1,8 @@
+.productsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1080px;
+  min-width: 940px;
+  gap: 20px;
+}
