@@ -7,8 +7,6 @@ import { Cart } from "./components/Cart/Cart";
 import { api } from "./lib/axios";
 
 import { normalizeString } from "./lib/normalize";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -53,17 +51,9 @@ function App() {
               onChange={(event) => setFilter(event.target.value)}
             ></input>
             <button
+              className="searchButton"
               onClick={() => {
                 filterProducts(filter);
-                toast("🦄 Wow so easy!", {
-                  position: "top-right",
-                  autoClose: 5000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                });
               }}
             >
               Pesquisar
@@ -84,7 +74,6 @@ function App() {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </>
   );
 }
