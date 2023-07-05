@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Total } from "../Total/Total";
 import "./Cart.css";
 import { CartCard } from "../CartCard/CartCard";
 export const Cart = ({ currentSale, setCurrentSale }) => {
@@ -7,11 +5,8 @@ export const Cart = ({ currentSale, setCurrentSale }) => {
     (acc, cur) => acc + cur.price * cur.unidades,
     0
   );
-  console.log(total);
 
-  function removeAll(currentSale, setCurrentSale) {
-    setCurrentSale([]);
-  }
+  const productsArray = currentSale;
 
   return (
     <div className="cartBox">
@@ -29,15 +24,25 @@ export const Cart = ({ currentSale, setCurrentSale }) => {
           />
         ))}
       </ul>
-      <div className="totalBox">
-        <div className="totalContainer">
-          <h2>Total</h2>
-          <span>{`R$ ${total.toFixed(2)}`}</span>
+      {productsArray.length > 0 && (
+        <div className="totalBox">
+          <div className="totalContainer">
+            <h2>Total</h2>
+            <span>{`R$ ${total.toFixed(2)}`}</span>
+          </div>
+          <button className="removerButton" onClick={() => setCurrentSale([])}>
+            Remover Todos
+          </button>
         </div>
-        <button className="removerButton" onClick={() => setCurrentSale([])}>
-          Remover Todos
-        </button>
-      </div>
+      )}
+      {productsArray.length === 0 && (
+        <div className="totalBox">
+          <div className="emptyContainer">
+            <h2>Sua sacola está vazia</h2>
+            <span>Adicione items</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -5,7 +5,7 @@
   max-width: 940px;
   gap: 20px;
 }
-@media (max-width: 1019px) {
+@media (max-width: 1234px) {
   .productsList {
     flex-wrap: nowrap;
     overflow-x: scroll;

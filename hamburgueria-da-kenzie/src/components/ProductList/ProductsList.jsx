@@ -1,10 +1,5 @@
-import { getProducts } from "../../services/getProducts";
-import { useState } from "react";
-import { useEffect } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
 import "./ProductsList.css";
-import { api } from "../../lib/axios";
-import { Total } from "../Total/Total";
 
 export const ProductsList = ({ products, setCurrentSale, currentSale }) => {
   function handleClick(productId) {

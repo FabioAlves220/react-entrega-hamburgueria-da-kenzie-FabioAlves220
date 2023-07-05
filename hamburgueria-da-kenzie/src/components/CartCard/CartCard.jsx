@@ -30,7 +30,7 @@ export const CartCard = ({
           >
             Remover
           </button>
-          <span className="unidades">{unidades}</span>
+          <span className="unidades">Qtd: {unidades}</span>
         </div>
       </div>
     </li>
