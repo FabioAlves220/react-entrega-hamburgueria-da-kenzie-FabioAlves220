@@ -30,15 +30,16 @@ export const Cart = ({ currentSale, setCurrentSale }) => {
             <h2>Total</h2>
             <span>{`R$ ${total.toFixed(2)}`}</span>
           </div>
+          <button className="comprarButton">Finalizar Compra</button>
           <button className="removerButton" onClick={() => setCurrentSale([])}>
-            Remover Todos
+            Limpar o carrinho
           </button>
         </div>
       )}
       {productsArray.length === 0 && (
         <div className="totalBox">
           <div className="emptyContainer">
-            <h2>Sua sacola está vazia</h2>
+            <h2>Seu carrinho está vazio</h2>
             <span>Adicione items</span>
           </div>
         </div>

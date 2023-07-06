@@ -39,16 +39,27 @@ function App() {
     setDisplayList(filteredList);
   }
 
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      filterProducts(filter);
+    }
+  };
+
   return (
     <>
       <div className="App">
         <header className="App-header">
-          <img src={logo} />
+          <img src={logo} alt="logo" onClick={handleLogoClick} />
           <div className="searchBox">
             <input
               type="text"
-              // onChange={(event) => filterProducts(event.target.value)}
               onChange={(event) => setFilter(event.target.value)}
+              onKeyDown={handleKeyDown}
             ></input>
             <button
               className="searchButton"

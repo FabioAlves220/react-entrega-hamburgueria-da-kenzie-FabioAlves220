@@ -9,7 +9,7 @@
   background: #27ae60;
   border-radius: 5px 5px 0px 0px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
@@ -25,16 +25,16 @@
 }
 .totalBox {
   width: 368px;
-  height: 140px;
+  height: 215px;
   background: #f5f5f5;
   border-radius: 0px 0px 5px 5px;
-  border-top: #27ae60;
   border-style: solid;
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
 }
 .totalContainer {
+  padding-top: 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -43,14 +43,14 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 }
 .totalContainer > span {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #828282;
 }
@@ -62,6 +62,7 @@
 }
 .removerButton {
   margin-top: 22px;
+  margin-left: 2px;
   width: 343px;
   height: 60px;
   background: #e0e0e0;
@@ -73,14 +74,42 @@
   font-size: 16px;
   line-height: 19px;
   color: #828282;
+  cursor: pointer;
+}
+
+.removerButton:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comprarButton {
+  margin-top: 22px;
+  margin-left: 2px;
+  width: 343px;
+  height: 60px;
+  background: #27ae60;
+  border: 2px solid #27ae60;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.comprarButton:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .emptyContainer {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 .emptyContainer h2 {
@@ -97,4 +126,5 @@
   font-size: 14px;
   line-height: 24px;
   color: #828282;
+  padding-left: 50px;
 }
